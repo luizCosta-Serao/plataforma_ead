@@ -24,6 +24,7 @@
         <a href="<?php echo INCLUDE_PATH_PAINEL; ?>">Início</a>
         <h2>Gestão EAD</h2>
         <a href="<?php echo INCLUDE_PATH_PAINEL ?>novo-aluno">Novo Aluno</a>
+        <a href="<?php echo INCLUDE_PATH_PAINEL ?>novo-modulo">Novo Módulo</a>
     </aside>
     <div class="content">
       <?php
