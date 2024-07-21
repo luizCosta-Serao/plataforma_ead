@@ -131,14 +131,14 @@ form {
   border-radius: 10px;
 }
 
-form div label {
+form label {
   display: block;
   font-size: 20px;
   color: #222;
   margin-bottom: 10px;
 }
 
-form div input {
+form input {
   display: block;
   height: 40px;
   border-radius: 10px;

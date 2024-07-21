@@ -22,6 +22,8 @@
   <section class="container">
     <aside class="sidebar">
         <a href="<?php echo INCLUDE_PATH_PAINEL; ?>">Início</a>
+        <h2>Gestão EAD</h2>
+        <a href="<?php echo INCLUDE_PATH_PAINEL ?>novo-aluno">Novo Aluno</a>
     </aside>
     <div class="content">
       <?php
