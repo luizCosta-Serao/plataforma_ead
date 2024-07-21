@@ -1,4 +1,11 @@
 <?php include('./config.php') ?>
+<?php
+  if (isset($_GET['loggout'])) {
+    session_destroy();
+    header('Location: '.INCLUDE_PATH);
+    die();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +19,14 @@
     <div class="logo">LOGO</div>
     <nav class="menu">
       <ul>
-        <li><a href="<?php echo INCLUDE_PATH; ?>login-aluno">Login</a></li>
+        <?php
+          if (Site::isLoginStudent()) {
+        ?>
+          <li><?php echo $_SESSION['aluno-nome']; ?></li>
+          <li><a href="<?php echo INCLUDE_PATH ?>?loggout">Sair</a></li>
+        <?php } else { ?>
+          <li><a href="<?php echo INCLUDE_PATH; ?>login-aluno">Login</a></li>
+        <?php } ?>
       </ul>
     </nav>
   </header>
