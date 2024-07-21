@@ -138,7 +138,8 @@ form label {
   margin-bottom: 10px;
 }
 
-form input {
+form input,
+form select {
   display: block;
   height: 40px;
   border-radius: 10px;
