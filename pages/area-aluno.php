@@ -18,7 +18,7 @@
         foreach ($aulas as $key => $aula) {
     ?>
       <h2><?php echo $value['nome'] ?></h2>
-      <p><a href="<?php echo INCLUDE_PATH; ?>aula/<?php echo $aula['id'] ?>"><?php echo $aula['nome'] ?></a></p>
+      <p><a href="<?php echo INCLUDE_PATH; ?>aula?id=<?php echo $aula['id'] ?>"><?php echo $aula['nome'] ?></a></p>
     <?php }} ?>
   </section>
 
