@@ -7,7 +7,21 @@
 ?>
   <section>
     <h2>Escolha o que deseja estudar hoje:</h2>
+    <?php
+      $modulos = MySql::connect()->prepare("SELECT * FROM `modulos_curso`");
+      $modulos->execute();
+      $modulos = $modulos->fetchAll();
+      foreach ($modulos as $key => $value) {
+        $aulas = MySql::connect()->prepare("SELECT * FROM `aulas_curso` WHERE modulo_id = ?");
+        $aulas->execute(array($value['id']));
+        $aulas = $aulas->fetchAll();
+        foreach ($aulas as $key => $aula) {
+    ?>
+      <h2><?php echo $value['nome'] ?></h2>
+      <p><a href="<?php echo INCLUDE_PATH; ?>aula/<?php echo $aula['id'] ?>"><?php echo $aula['nome'] ?></a></p>
+    <?php }} ?>
   </section>
+
 
 <?php
   } else {
